@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WRc-0B-SJ7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-3h-h9p">
-                                <rect key="frame" x="0.0" y="154" width="414" height="708"/>
+                                <rect key="frame" x="0.0" y="198" width="414" height="615"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QfK-ZV-OKZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -38,21 +38,21 @@
                                 </cells>
                             </collectionView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sT5-5m-3LV">
-                                <rect key="frame" x="0.0" y="104" width="344" height="51"/>
+                                <rect key="frame" x="0.0" y="148" width="344" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVj-9d-Nja">
-                                <rect key="frame" x="177" y="54" width="60.5" height="21"/>
+                                <rect key="frame" x="177" y="98" width="60.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-8V-Azh">
-                                <rect key="frame" x="361" y="53.5" width="23" height="22"/>
+                                <rect key="frame" x="361" y="97.5" width="23" height="22"/>
                                 <state key="normal" image="cart.fill" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puj-jv-Wgs">
-                                <rect key="frame" x="352" y="109" width="47" height="30"/>
+                                <rect key="frame" x="352" y="153" width="47" height="30"/>
                                 <state key="normal" title="search"/>
                             </button>
                         </subviews>
@@ -77,10 +77,69 @@
                             <constraint firstItem="sT5-5m-3LV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uzp-gm-0bH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tWa-Ai-KUj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111.59420289855073" y="93.75"/>
+            <point key="canvasLocation" x="3752.1739130434785" y="93.75"/>
+        </scene>
+        <!--Music-->
+        <scene sceneID="CtB-OW-R72">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Music" id="rAD-L4-ZWb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="N4F-2d-Q84"/>
+                    <navigationItem key="navigationItem" id="ief-P2-peW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ImF-iB-Uhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="440"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z5i-xo-q5E">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WRc-0B-SJ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OJA-x8-w2c">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jsD-0l-RGP" kind="relationship" relationship="viewControllers" id="Sdc-4K-94J"/>
+                        <segue destination="KEc-eH-G0h" kind="relationship" relationship="viewControllers" id="YkV-6f-7aP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ips-f1-tfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.8840579710147" y="93.75"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dHc-dT-PcC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jsD-0l-RGP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tZd-Ik-cbk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nhS-jc-oac">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ao2-3p-uN5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cm-AK-wZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842.0289855072465" y="93.75"/>
+        </scene>
+        <!--Music-->
+        <scene sceneID="SGz-D2-aYP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Music" id="KEc-eH-G0h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="y8H-jn-1X5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOn-lM-kYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2803" y="674"/>
         </scene>
     </scenes>
     <resources>
