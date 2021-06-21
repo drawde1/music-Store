@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		C99A71702680D71000BDFACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A716F2680D71000BDFACA /* AppDelegate.swift */; };
 		C99A71722680D71000BDFACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71712680D71000BDFACA /* SceneDelegate.swift */; };
-		C99A71742680D71000BDFACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71732680D71000BDFACA /* ViewController.swift */; };
+		C99A71742680D71000BDFACA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71732680D71000BDFACA /* LoginViewController.swift */; };
 		C99A71772680D71000BDFACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71752680D71000BDFACA /* Main.storyboard */; };
 		C99A717A2680D71000BDFACA /* Music_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */; };
 		C99A717C2680D71100BDFACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99A717B2680D71100BDFACA /* Assets.xcassets */; };
 		C99A717F2680D71100BDFACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A717D2680D71100BDFACA /* LaunchScreen.storyboard */; };
 		C99A718A2680D71100BDFACA /* Music_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71892680D71100BDFACA /* Music_StoreTests.swift */; };
 		C99A71952680D71100BDFACA /* Music_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71942680D71100BDFACA /* Music_StoreUITests.swift */; };
+		C99A71AE2680F67B00BDFACA /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71AD2680F67B00BDFACA /* ProductViewController.swift */; };
+		C99A71B22680F6F100BDFACA /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71B12680F6F100BDFACA /* MusicViewController.swift */; };
+		C99A71B42680F70400BDFACA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71B32680F70400BDFACA /* ProfileViewController.swift */; };
+		C99A71B62680F71A00BDFACA /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71B52680F71A00BDFACA /* CartViewController.swift */; };
+		C99A71B82680F78400BDFACA /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71B72680F78400BDFACA /* Product.storyboard */; };
+		C99A71BA2680F7A800BDFACA /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71B92680F7A800BDFACA /* Music.storyboard */; };
+		C99A71BC2680F7E100BDFACA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71BB2680F7E100BDFACA /* Profile.storyboard */; };
+		C99A71BE2680F80400BDFACA /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71BD2680F80400BDFACA /* Cart.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		C99A716C2680D71000BDFACA /* Music Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99A716F2680D71000BDFACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99A71712680D71000BDFACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C99A71732680D71000BDFACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C99A71732680D71000BDFACA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C99A71762680D71000BDFACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99A71792680D71000BDFACA /* Music_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Music_Store.xcdatamodel; sourceTree = "<group>"; };
 		C99A717B2680D71100BDFACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +59,14 @@
 		C99A71902680D71100BDFACA /* Music StoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music StoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99A71942680D71100BDFACA /* Music_StoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_StoreUITests.swift; sourceTree = "<group>"; };
 		C99A71962680D71100BDFACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99A71AD2680F67B00BDFACA /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		C99A71B12680F6F100BDFACA /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		C99A71B32680F70400BDFACA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C99A71B52680F71A00BDFACA /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		C99A71B72680F78400BDFACA /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		C99A71B92680F7A800BDFACA /* Music.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Music.storyboard; sourceTree = "<group>"; };
+		C99A71BB2680F7E100BDFACA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C99A71BD2680F80400BDFACA /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +162,6 @@
 		C99A71A42680D77700BDFACA /* view */ = {
 			isa = PBXGroup;
 			children = (
-				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -154,7 +169,11 @@
 		C99A71A52680D78C00BDFACA /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				C99A71732680D71000BDFACA /* ViewController.swift */,
+				C99A71732680D71000BDFACA /* LoginViewController.swift */,
+				C99A71B12680F6F100BDFACA /* MusicViewController.swift */,
+				C99A71AD2680F67B00BDFACA /* ProductViewController.swift */,
+				C99A71B32680F70400BDFACA /* ProfileViewController.swift */,
+				C99A71B52680F71A00BDFACA /* CartViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -184,6 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				C99A71752680D71000BDFACA /* Main.storyboard */,
+				C99A71B72680F78400BDFACA /* Product.storyboard */,
+				C99A71B92680F7A800BDFACA /* Music.storyboard */,
+				C99A71BB2680F7E100BDFACA /* Profile.storyboard */,
+				C99A71BD2680F80400BDFACA /* Cart.storyboard */,
 			);
 			name = storyBoard;
 			sourceTree = "<group>";
@@ -191,6 +214,7 @@
 		C99A71AA2680D7F400BDFACA /* coreData */ = {
 			isa = PBXGroup;
 			children = (
+				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
 			);
 			name = coreData;
 			sourceTree = "<group>";
@@ -298,9 +322,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99A71BC2680F7E100BDFACA /* Profile.storyboard in Resources */,
 				C99A717F2680D71100BDFACA /* LaunchScreen.storyboard in Resources */,
+				C99A71BA2680F7A800BDFACA /* Music.storyboard in Resources */,
 				C99A717C2680D71100BDFACA /* Assets.xcassets in Resources */,
+				C99A71B82680F78400BDFACA /* Product.storyboard in Resources */,
 				C99A71772680D71000BDFACA /* Main.storyboard in Resources */,
+				C99A71BE2680F80400BDFACA /* Cart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99A71742680D71000BDFACA /* ViewController.swift in Sources */,
+				C99A71B22680F6F100BDFACA /* MusicViewController.swift in Sources */,
+				C99A71742680D71000BDFACA /* LoginViewController.swift in Sources */,
 				C99A717A2680D71000BDFACA /* Music_Store.xcdatamodeld in Sources */,
 				C99A71702680D71000BDFACA /* AppDelegate.swift in Sources */,
+				C99A71B62680F71A00BDFACA /* CartViewController.swift in Sources */,
+				C99A71B42680F70400BDFACA /* ProfileViewController.swift in Sources */,
+				C99A71AE2680F67B00BDFACA /* ProductViewController.swift in Sources */,
 				C99A71722680D71000BDFACA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
