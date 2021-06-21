@@ -78,6 +78,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tWa-Ai-KUj"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RdC-3h-h9p" id="43b-pB-CdQ"/>
+                        <outlet property="searchBar" destination="sT5-5m-3LV" id="hk5-R4-S45"/>
+                        <outlet property="searchButton" destination="puj-jv-Wgs" id="kuU-Rg-8H1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,12 +105,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WRc-0B-SJ7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OJA-x8-w2c">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="jsD-0l-RGP" kind="relationship" relationship="viewControllers" id="Sdc-4K-94J"/>
-                        <segue destination="KEc-eH-G0h" kind="relationship" relationship="viewControllers" id="YkV-6f-7aP"/>
+                        <segue destination="KEc-eH-G0h" kind="relationship" relationship="viewControllers" id="hvT-Xy-FtO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ips-f1-tfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
