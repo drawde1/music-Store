@@ -101,14 +101,14 @@
 		C99A716E2680D71000BDFACA /* Music Store */ = {
 			isa = PBXGroup;
 			children = (
-				C99A716F2680D71000BDFACA /* AppDelegate.swift */,
-				C99A71712680D71000BDFACA /* SceneDelegate.swift */,
-				C99A71732680D71000BDFACA /* ViewController.swift */,
-				C99A71752680D71000BDFACA /* Main.storyboard */,
-				C99A717B2680D71100BDFACA /* Assets.xcassets */,
-				C99A717D2680D71100BDFACA /* LaunchScreen.storyboard */,
-				C99A71802680D71100BDFACA /* Info.plist */,
-				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
+				C99A71A92680D7E400BDFACA /* storyBoard */,
+				C99A71A72680D7B200BDFACA /* model */,
+				C99A71A62680D79600BDFACA /* modelView */,
+				C99A71A52680D78C00BDFACA /* controller */,
+				C99A71A42680D77700BDFACA /* view */,
+				C99A71A22680D73300BDFACA /* support */,
+				C99A71AA2680D7F400BDFACA /* coreData */,
+				C99A71A82680D7C000BDFACA /* APIManager */,
 			);
 			path = "Music Store";
 			sourceTree = "<group>";
@@ -129,6 +129,70 @@
 				C99A71962680D71100BDFACA /* Info.plist */,
 			);
 			path = "Music StoreUITests";
+			sourceTree = "<group>";
+		};
+		C99A71A22680D73300BDFACA /* support */ = {
+			isa = PBXGroup;
+			children = (
+				C99A717B2680D71100BDFACA /* Assets.xcassets */,
+				C99A717D2680D71100BDFACA /* LaunchScreen.storyboard */,
+				C99A71712680D71000BDFACA /* SceneDelegate.swift */,
+				C99A716F2680D71000BDFACA /* AppDelegate.swift */,
+				C99A71802680D71100BDFACA /* Info.plist */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		C99A71A42680D77700BDFACA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		C99A71A52680D78C00BDFACA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C99A71732680D71000BDFACA /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		C99A71A62680D79600BDFACA /* modelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modelView;
+			sourceTree = "<group>";
+		};
+		C99A71A72680D7B200BDFACA /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		C99A71A82680D7C000BDFACA /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		C99A71A92680D7E400BDFACA /* storyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C99A71752680D71000BDFACA /* Main.storyboard */,
+			);
+			name = storyBoard;
+			sourceTree = "<group>";
+		};
+		C99A71AA2680D7F400BDFACA /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = coreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
