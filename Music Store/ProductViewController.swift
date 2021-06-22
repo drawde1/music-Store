@@ -9,16 +9,23 @@ import UIKit
 
 class ProductViewController: UIViewController {
 
+    //Buttonsvvvvvv
+    @IBOutlet weak var Cancel: UIButton!
+    @IBOutlet weak var addToCart: UIButton!
     @IBOutlet weak var searchButton: UIButton!
+    //Buttons^^^^^^
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var albumViewModel: AlbumViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideButtons()
         configureCollectionView()
         configureViewModel()
-        self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
+        configureButtons()
+        
     }
     func configureViewModel(){
         self.albumViewModel = AlbumViewModel(updateModel: {
@@ -26,17 +33,21 @@ class ProductViewController: UIViewController {
             if let welf = self{
                 print("$$$$$$$$", welf.albumViewModel?.albumResults?.results[0])
             }
-          
         })
-        
+        self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
     }
-    
-    
+     @objc func hideButtons(){
+        Cancel.isHidden = true
+        addToCart.isHidden = true
+    }
+    func configureButtons(){
+        Cancel.addTarget(self, action: #selector(hideButtons), for: .touchUpInside)
+    }
     func configureCollectionView(){
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "ProductCell")
         self.collectionView.dataSource = self
-//        self.collectionView.delegate = self
+        self.collectionView.delegate = self
      
         }
 }
@@ -52,6 +63,12 @@ extension ProductViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         return cell
+    }
+}
+extension ProductViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Cancel.isHidden = false
+        addToCart.isHidden = false
     }
 }
 //extension ProductViewController: UICollectionViewDelegateFlowLayout{
