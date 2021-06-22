@@ -11,26 +11,39 @@ class ProductViewController: UIViewController {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var albumViewModel: AlbumViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        configureViewModel()
+        self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
     }
+    func configureViewModel(){
+        self.albumViewModel = AlbumViewModel(updateModel: {
+            [weak self] in
+            if let welf = self{
+                print("$$$$$$$$", welf.albumViewModel?.albumResults?.results[0])
+            }
+          
+        })
+        
+    }
+    
+    
     func configureCollectionView(){
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "ProductCell")
         self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+//        self.collectionView.delegate = self
      
         }
 }
 
 extension ProductViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,8 +54,8 @@ extension ProductViewController: UICollectionViewDataSource{
         return cell
     }
 }
-extension ProductViewController: UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 2000, height: 2000)
-    }}
+//extension ProductViewController: UICollectionViewDelegateFlowLayout{
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        CGSize(width: 2000, height: 2000)
+//    }}
 
