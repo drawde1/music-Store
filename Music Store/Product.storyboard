@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-3h-h9p">
-                                <rect key="frame" x="0.0" y="198" width="414" height="615"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-3h-h9p">
+                                <rect key="frame" x="-15" y="198" width="414" height="615"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QfK-ZV-OKZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -58,6 +58,24 @@
                                 <rect key="frame" x="352" y="153" width="47" height="30"/>
                                 <state key="normal" title="search"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngm-zT-1UV">
+                                <rect key="frame" x="28" y="652" width="358" height="71"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="DWs-wq-4VZ"/>
+                                    <constraint firstAttribute="height" constant="71" id="ouk-J2-Dew"/>
+                                </constraints>
+                                <state key="normal" title="add to cart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-Jm-5kg">
+                                <rect key="frame" x="28" y="731" width="358" height="71"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="MHv-c8-xM9"/>
+                                    <constraint firstAttribute="width" constant="358" id="OX7-xZ-Ujt"/>
+                                </constraints>
+                                <state key="normal" title="cancel"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,19 +87,25 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sT5-5m-3LV" secondAttribute="trailing" constant="70" id="9xP-pu-eU2"/>
                             <constraint firstItem="RVj-9d-Nja" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EbZ-Cp-kV1"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="F5y-U5-qrz"/>
+                            <constraint firstItem="Ug1-Jm-5kg" firstAttribute="top" secondItem="ngm-zT-1UV" secondAttribute="bottom" constant="8" symbolic="YES" id="H66-Nu-owD"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="IS6-pF-Tb8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ngm-zT-1UV" secondAttribute="bottom" constant="90" id="PdS-gS-hQp"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="X84-Wa-0Qz"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Ycc-DS-V4N"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="a1t-Le-8rz"/>
                             <constraint firstItem="sT5-5m-3LV" firstAttribute="top" secondItem="RVj-9d-Nja" secondAttribute="bottom" constant="29" id="cZ3-Vp-sQR"/>
+                            <constraint firstItem="ngm-zT-1UV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ipB-Zl-4C4"/>
                             <constraint firstItem="RdC-3h-h9p" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="l26-D8-6qG"/>
                             <constraint firstItem="S0R-8V-Azh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-30" id="mRb-n9-r2U"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="puj-jv-Wgs" secondAttribute="trailing" constant="15" id="naF-5V-oam"/>
                             <constraint firstItem="sT5-5m-3LV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uzp-gm-0bH"/>
+                            <constraint firstItem="Ug1-Jm-5kg" firstAttribute="centerX" secondItem="ngm-zT-1UV" secondAttribute="centerX" id="yKK-6s-TcE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tWa-Ai-KUj"/>
                     <connections>
+                        <outlet property="Cancel" destination="Ug1-Jm-5kg" id="ggE-vu-QPe"/>
+                        <outlet property="addToCart" destination="ngm-zT-1UV" id="Rwm-tM-8H6"/>
                         <outlet property="collectionView" destination="RdC-3h-h9p" id="43b-pB-CdQ"/>
                         <outlet property="searchBar" destination="sT5-5m-3LV" id="hk5-R4-S45"/>
                         <outlet property="searchButton" destination="puj-jv-Wgs" id="kuU-Rg-8H1"/>
@@ -166,6 +190,9 @@
         <image name="music.quarternote.3" catalog="system" width="128" height="103"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

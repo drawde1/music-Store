@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JZx-Sn-XE2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray4Color"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sub total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n97-gO-uEr">
                                 <rect key="frame" x="20" y="672" width="71" height="21"/>
@@ -50,6 +51,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-BP-b8d">
+                                <rect key="frame" x="352" y="782.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of item(s):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-52-olm">
                                 <rect key="frame" x="9" y="709" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,15 +69,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-BP-b8d">
-                                <rect key="frame" x="352" y="782.5" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-i0-NJM">
+                                <rect key="frame" x="172" y="817" width="70" height="30"/>
+                                <state key="normal" title="Buy Now!!"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="K6f-oi-HTK" firstAttribute="centerX" secondItem="aE2-52-olm" secondAttribute="centerX" id="Bjq-O2-20Y"/>
                             <constraint firstItem="n97-gO-uEr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BuA-RL-sJ8"/>
@@ -81,11 +86,13 @@
                             <constraint firstItem="6RX-kw-nzU" firstAttribute="top" secondItem="K6f-oi-HTK" secondAttribute="bottom" constant="16" id="Itq-ns-uSw"/>
                             <constraint firstItem="K6f-oi-HTK" firstAttribute="top" secondItem="aE2-52-olm" secondAttribute="bottom" constant="15" id="Jhb-XG-YwU"/>
                             <constraint firstItem="MBy-y9-CHy" firstAttribute="centerX" secondItem="A5f-yi-YGK" secondAttribute="centerX" id="Q4p-nY-WrL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Bz2-i0-NJM" secondAttribute="bottom" constant="15" id="RnO-Ni-0Zj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JZx-Sn-XE2" secondAttribute="trailing" id="Tmh-QX-oY4"/>
                             <constraint firstItem="n97-gO-uEr" firstAttribute="top" secondItem="JZx-Sn-XE2" secondAttribute="bottom" constant="10" id="Vl7-AI-z1b"/>
                             <constraint firstItem="A5f-yi-YGK" firstAttribute="firstBaseline" secondItem="n97-gO-uEr" secondAttribute="firstBaseline" id="eHy-Rm-sZ1"/>
                             <constraint firstItem="MBy-y9-CHy" firstAttribute="centerY" secondItem="aE2-52-olm" secondAttribute="centerY" id="hED-dy-hH2"/>
                             <constraint firstItem="vDs-BP-b8d" firstAttribute="centerY" secondItem="6RX-kw-nzU" secondAttribute="centerY" id="isZ-qq-tvf"/>
+                            <constraint firstItem="Bz2-i0-NJM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="k3H-E0-Un7"/>
                             <constraint firstItem="JZx-Sn-XE2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sXC-Fe-CPU"/>
                             <constraint firstItem="sQK-bp-cXf" firstAttribute="centerX" secondItem="MBy-y9-CHy" secondAttribute="centerX" id="uRz-sL-M0R"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A5f-yi-YGK" secondAttribute="trailing" constant="20" id="utI-ay-bPZ"/>
@@ -106,6 +113,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
