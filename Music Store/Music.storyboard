@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Music View Controller-->
+        <!--music-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="MusicViewController" customModule="Music_Store" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oi3-WJ-QRb">
-                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="voW-vk-jSP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -55,7 +55,9 @@
                             <constraint firstItem="oi3-WJ-QRb" firstAttribute="firstBaseline" secondItem="taG-yb-X9Z" secondAttribute="baseline" constant="12.5" symbolType="layoutAnchor" id="by7-xm-GoC"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="music" image="music.note" catalog="system" id="SLT-qn-Xey"/>
                     <navigationItem key="navigationItem" id="gAm-lC-8it"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="music.note" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
