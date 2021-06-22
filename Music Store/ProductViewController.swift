@@ -31,7 +31,7 @@ class ProductViewController: UIViewController {
         self.albumViewModel = AlbumViewModel(updateModel: {
             [weak self] in
             if let welf = self{
-                print("$$$$$$$$", welf.albumViewModel?.albumResults?.results[0])
+                welf.collectionView.reloadData()
             }
         })
         self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
@@ -54,14 +54,21 @@ class ProductViewController: UIViewController {
 
 extension ProductViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        guard let count = self.albumViewModel?.albumResults?.results.count else{
+            return 2
+        }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCollectionViewCell else{
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCollectionViewCell
+        else
+        {
             print(" ProductViewController line 37: cell returned nil")
             return UICollectionViewCell()
         }
+       
+        cell.configureCell(data: albumViewModel?.albumResults?.results[indexPath.row] ?? AlbumData(collectionPrice: 0.2, collectionName: "yes", artworkUrl100: "yes"))
         return cell
     }
 }
