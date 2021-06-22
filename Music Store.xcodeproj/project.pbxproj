@@ -29,6 +29,8 @@
 		C99A72072682374D00BDFACA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A72062682374D00BDFACA /* APIManager.swift */; };
 		C99A720926823ABA00BDFACA /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A720826823ABA00BDFACA /* AlbumModel.swift */; };
 		C99A720B26823C9300BDFACA /* albumModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A720A26823C9300BDFACA /* albumModelView.swift */; };
+		C99A720E268252D000BDFACA /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A720C268252D000BDFACA /* CartTableViewCell.swift */; };
+		C99A720F268252D000BDFACA /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99A720D268252D000BDFACA /* CartTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		C99A72062682374D00BDFACA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C99A720826823ABA00BDFACA /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		C99A720A26823C9300BDFACA /* albumModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumModelView.swift; sourceTree = "<group>"; };
+		C99A720C268252D000BDFACA /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		C99A720D268252D000BDFACA /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +176,8 @@
 		C99A71A42680D77700BDFACA /* view */ = {
 			isa = PBXGroup;
 			children = (
-				C99A71C126810CB500BDFACA /* ProductCollectionViewCell.swift */,
-				C99A71C226810CB500BDFACA /* ProductCollectionViewCell.xib */,
+				C99A7211268252F500BDFACA /* cart */,
+				C99A7210268252D700BDFACA /* product */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -232,6 +236,24 @@
 				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
 			);
 			name = coreData;
+			sourceTree = "<group>";
+		};
+		C99A7210268252D700BDFACA /* product */ = {
+			isa = PBXGroup;
+			children = (
+				C99A71C126810CB500BDFACA /* ProductCollectionViewCell.swift */,
+				C99A71C226810CB500BDFACA /* ProductCollectionViewCell.xib */,
+			);
+			name = product;
+			sourceTree = "<group>";
+		};
+		C99A7211268252F500BDFACA /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				C99A720C268252D000BDFACA /* CartTableViewCell.swift */,
+				C99A720D268252D000BDFACA /* CartTableViewCell.xib */,
+			);
+			name = cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99A720F268252D000BDFACA /* CartTableViewCell.xib in Resources */,
 				C99A71BC2680F7E100BDFACA /* Profile.storyboard in Resources */,
 				C99A717F2680D71100BDFACA /* LaunchScreen.storyboard in Resources */,
 				C99A71BA2680F7A800BDFACA /* Music.storyboard in Resources */,
@@ -378,6 +401,7 @@
 				C99A71B62680F71A00BDFACA /* CartViewController.swift in Sources */,
 				C99A71B42680F70400BDFACA /* ProfileViewController.swift in Sources */,
 				C99A71AE2680F67B00BDFACA /* ProductViewController.swift in Sources */,
+				C99A720E268252D000BDFACA /* CartTableViewCell.swift in Sources */,
 				C99A720926823ABA00BDFACA /* AlbumModel.swift in Sources */,
 				C99A71C326810CB500BDFACA /* ProductCollectionViewCell.swift in Sources */,
 				C99A71722680D71000BDFACA /* SceneDelegate.swift in Sources */,

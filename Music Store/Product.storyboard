@@ -50,6 +50,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-8V-Azh">
                                 <rect key="frame" x="361" y="97.5" width="23" height="22"/>
                                 <state key="normal" image="cart.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="vNx-Bp-2h1" kind="show" id="pf0-Gm-qFX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puj-jv-Wgs">
                                 <rect key="frame" x="352" y="153" width="47" height="30"/>
@@ -87,6 +90,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3752.1739130434785" y="93.75"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="rCX-6J-JDe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" id="vNx-Bp-2h1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xcm-IF-4Qi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjL-gb-2zV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4214" y="-139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z5i-xo-q5E">
