@@ -101,6 +101,7 @@
                     <connections>
                         <segue destination="jsD-0l-RGP" kind="relationship" relationship="viewControllers" id="Sdc-4K-94J"/>
                         <segue destination="KEc-eH-G0h" kind="relationship" relationship="viewControllers" id="hvT-Xy-FtO"/>
+                        <segue destination="cOF-YK-Ecr" kind="relationship" relationship="viewControllers" id="gld-LP-55e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ips-f1-tfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +126,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cm-AK-wZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2842.0289855072465" y="93.75"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Vpk-Is-IfU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="cOF-YK-Ecr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Fei-Lw-zFe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b26-6a-yLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="681"/>
         </scene>
         <!--Music-->
         <scene sceneID="SGz-D2-aYP">
