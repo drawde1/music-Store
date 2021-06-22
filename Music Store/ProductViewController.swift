@@ -18,13 +18,14 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
-        // Do any additional setup after loading the view.
     }
     func configureCollectionView(){
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "ProductCell")
         self.collectionView.dataSource = self
-    }
+        self.collectionView.delegate = self
+     
+        }
 }
 
 extension ProductViewController: UICollectionViewDataSource{
@@ -42,9 +43,6 @@ extension ProductViewController: UICollectionViewDataSource{
 }
 extension ProductViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = ((UIScreen.main.bounds.width/2) - 10)
-        let height = ((UIScreen.main.bounds.height/6) - 25)
-        return CGSize(width: width, height: height)
-    }
-}
+        CGSize(width: 2000, height: 2000)
+    }}
 

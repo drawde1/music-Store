@@ -88,17 +88,6 @@
             </objects>
             <point key="canvasLocation" x="3752.1739130434785" y="93.75"/>
         </scene>
-        <!--Music-->
-        <scene sceneID="CtB-OW-R72">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Music" id="rAD-L4-ZWb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="N4F-2d-Q84"/>
-                    <navigationItem key="navigationItem" id="ief-P2-peW"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ImF-iB-Uhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="573" y="440"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z5i-xo-q5E">
             <objects>
@@ -118,11 +107,11 @@
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="93.75"/>
         </scene>
-        <!--Item-->
+        <!--products-->
         <scene sceneID="dHc-dT-PcC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jsD-0l-RGP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tZd-Ik-cbk"/>
+                    <tabBarItem key="tabBarItem" title="products" image="music.quarternote.3" catalog="system" id="tZd-Ik-cbk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nhS-jc-oac">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -150,6 +139,7 @@
     </scenes>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="music.quarternote.3" catalog="system" width="128" height="103"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
