@@ -16,8 +16,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.name.text! = "Name: " + (UserModel.shared.user?.name ?? "N/A")
+        self.currentSpend.text! = "Current Spent: \(UserModel.shared.user?.currentPoint ?? 0)"
+        self.spend.text! = "Points to reward: \(UserModel.shared.user?.pointTreward ?? 0)"
     }
     
 

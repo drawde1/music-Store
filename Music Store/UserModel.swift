@@ -8,7 +8,7 @@
 import Foundation
 
 class UserModel {
-    static let shared = UserModel()
+    static var shared = UserModel()
     var user:User?
 }
 
