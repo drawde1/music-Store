@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75E00D9D26837BDA00887F97 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E00D9C26837BDA00887F97 /* LoginSignup.storyboard */; };
 		C99A71702680D71000BDFACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A716F2680D71000BDFACA /* AppDelegate.swift */; };
 		C99A71722680D71000BDFACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71712680D71000BDFACA /* SceneDelegate.swift */; };
-		C99A71742680D71000BDFACA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71732680D71000BDFACA /* LoginViewController.swift */; };
+		C99A71742680D71000BDFACA /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A71732680D71000BDFACA /* LoginSignupViewController.swift */; };
 		C99A71772680D71000BDFACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99A71752680D71000BDFACA /* Main.storyboard */; };
 		C99A717A2680D71000BDFACA /* Music_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */; };
 		C99A717C2680D71100BDFACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99A717B2680D71100BDFACA /* Assets.xcassets */; };
@@ -51,10 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75E00D9C26837BDA00887F97 /* LoginSignup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignup.storyboard; sourceTree = "<group>"; };
 		C99A716C2680D71000BDFACA /* Music Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99A716F2680D71000BDFACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99A71712680D71000BDFACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C99A71732680D71000BDFACA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C99A71732680D71000BDFACA /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		C99A71762680D71000BDFACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99A71792680D71000BDFACA /* Music_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Music_Store.xcdatamodel; sourceTree = "<group>"; };
 		C99A717B2680D71100BDFACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,7 +187,7 @@
 		C99A71A52680D78C00BDFACA /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				C99A71732680D71000BDFACA /* LoginViewController.swift */,
+				C99A71732680D71000BDFACA /* LoginSignupViewController.swift */,
 				C99A71B12680F6F100BDFACA /* MusicViewController.swift */,
 				C99A71AD2680F67B00BDFACA /* ProductViewController.swift */,
 				C99A71B32680F70400BDFACA /* ProfileViewController.swift */,
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				C99A71752680D71000BDFACA /* Main.storyboard */,
+				75E00D9C26837BDA00887F97 /* LoginSignup.storyboard */,
 				C99A71B72680F78400BDFACA /* Product.storyboard */,
 				C99A71B92680F7A800BDFACA /* Music.storyboard */,
 				C99A71BB2680F7E100BDFACA /* Profile.storyboard */,
@@ -359,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E00D9D26837BDA00887F97 /* LoginSignup.storyboard in Resources */,
 				C99A720F268252D000BDFACA /* CartTableViewCell.xib in Resources */,
 				C99A71BC2680F7E100BDFACA /* Profile.storyboard in Resources */,
 				C99A717F2680D71100BDFACA /* LaunchScreen.storyboard in Resources */,
@@ -393,7 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99A71B22680F6F100BDFACA /* MusicViewController.swift in Sources */,
-				C99A71742680D71000BDFACA /* LoginViewController.swift in Sources */,
+				C99A71742680D71000BDFACA /* LoginSignupViewController.swift in Sources */,
 				C99A72072682374D00BDFACA /* APIManager.swift in Sources */,
 				C99A717A2680D71000BDFACA /* Music_Store.xcdatamodeld in Sources */,
 				C99A720B26823C9300BDFACA /* albumModelView.swift in Sources */,
