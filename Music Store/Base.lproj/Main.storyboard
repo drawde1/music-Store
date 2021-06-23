@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUn-Di-I8H">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,12 +13,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Music_Store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40V-Qe-14C">
+                                <rect key="frame" x="130" y="395" width="130" height="30"/>
+                                <state key="normal" title="Login / Signup"/>
+                                <connections>
+                                    <segue destination="DiI-7q-xk7" kind="show" id="rsI-Uy-z0P"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO4-na-wMZ">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="129" y="433" width="132" height="30"/>
+                                <state key="normal" title="Use as Guest"/>
                                 <connections>
                                     <segue destination="Z39-S0-0uJ" kind="show" id="B24-4v-Zce"/>
                                 </connections>
@@ -27,15 +34,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QO4-na-wMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PCO-P3-wYd"/>
-                            <constraint firstItem="QO4-na-wMZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sE5-fK-eWX"/>
+                            <constraint firstItem="QO4-na-wMZ" firstAttribute="top" secondItem="40V-Qe-14C" secondAttribute="bottom" constant="8" id="5FU-wZ-KiL"/>
+                            <constraint firstItem="40V-Qe-14C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="307" id="9Na-jX-eIs"/>
+                            <constraint firstItem="40V-Qe-14C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="WZ9-Xn-dK2"/>
+                            <constraint firstItem="40V-Qe-14C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZhA-Ib-Xhd"/>
+                            <constraint firstItem="QO4-na-wMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="mmt-6e-SLc"/>
+                            <constraint firstItem="40V-Qe-14C" firstAttribute="centerX" secondItem="QO4-na-wMZ" secondAttribute="centerX" id="ulK-JX-6gR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BMl-lk-HmU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="93.75"/>
+            <point key="canvasLocation" x="1021.5384615384615" y="93.127962085308056"/>
         </scene>
         <!--Product-->
         <scene sceneID="bJb-kz-GfR">
@@ -53,7 +64,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QUn-Di-I8H" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mp8-1A-KJc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -64,6 +75,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfW-7k-XOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="93.75"/>
+        </scene>
+        <!--LoginSignup-->
+        <scene sceneID="fMg-uT-mVb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginSignup" id="DiI-7q-xk7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TFR-7y-KAB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-87-2wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="29"/>
         </scene>
     </scenes>
     <resources>
