@@ -67,8 +67,10 @@ extension ProductViewController: UICollectionViewDataSource{
             print(" ProductViewController line 37: cell returned nil")
             return UICollectionViewCell()
         }
-       
-        cell.configureCell(data: albumViewModel?.albumResults?.results[indexPath.row] ?? AlbumData(collectionPrice: 0.2, collectionName: "yes", artworkUrl100: "yes"))
+        guard let data = self.albumViewModel?.albumResults?.results[indexPath.row] else {
+            return cell
+        }
+        cell.configureCell(data: data)
         return cell
     }
 }
@@ -78,8 +80,10 @@ extension ProductViewController: UICollectionViewDelegate{
         addToCart.isHidden = false
     }
 }
-//extension ProductViewController: UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        CGSize(width: 2000, height: 2000)
-//    }}
+extension ProductViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = ((collectionView.bounds.width/2)-10)
+        let height = ((collectionView.bounds.height/3)+10)
+        return CGSize(width: width , height: height)
+    }}
 
