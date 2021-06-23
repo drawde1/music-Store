@@ -14,7 +14,7 @@ class LoginSignupViewController: UIViewController {
         super.viewDidLoad()
         createUser()
 //        fetchData()
-        fetchOneData(with: "Mattt", and: "123")
+//        fetchOneData(with: "Mattt", and: "123")
         
         // Do any additional setup after loading the view....
     }
@@ -28,15 +28,15 @@ class LoginSignupViewController: UIViewController {
         
         user.password = "123"
         user.name = "Matt"
-        UserModel().shared.setUser(user: user)
-        print( UserModel().shared.user)
+        UserModel.shared.user = user
+
 //        let song = Song(context: viewContext)
 //        song.name = "Fire"
 //        song.price = 10
 //        song.owner = user
 //
 //        print(song)
-        print(user)
+//        print(user)
         try? viewContext.save()
     }
 
