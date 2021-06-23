@@ -18,6 +18,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var albumViewModel: AlbumViewModel?
+    var clickedData: AlbumData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ProductViewController: UIViewController {
         configureButtons()
         
     }
+    
     func configureViewModel(){
         self.albumViewModel = AlbumViewModel(updateModel: {
             [weak self] in
@@ -36,13 +38,23 @@ class ProductViewController: UIViewController {
         })
         self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
     }
+    
      @objc func hideButtons(){
         Cancel.isHidden = true
         addToCart.isHidden = true
+        clickedData = nil
+    }
+    @objc func saveSong(){
+        guard let data = self.clickedData else {
+             return
+        }
+        CoreDataManager().saveSong(data: data)
     }
     func configureButtons(){
         Cancel.addTarget(self, action: #selector(hideButtons), for: .touchUpInside)
+        addToCart.addTarget(self, action: #selector(saveSong), for: .touchUpInside)
     }
+    
     func configureCollectionView(){
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "ProductCell")
@@ -51,6 +63,12 @@ class ProductViewController: UIViewController {
      
         }
 }
+
+
+
+
+
+
 
 extension ProductViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,6 +96,10 @@ extension ProductViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Cancel.isHidden = false
         addToCart.isHidden = false
+        guard let data = self.albumViewModel?.albumResults?.results[indexPath.row] else{
+            return
+        }
+        clickedData = data
     }
 }
 extension ProductViewController: UICollectionViewDelegateFlowLayout{

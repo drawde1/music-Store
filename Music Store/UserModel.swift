@@ -8,10 +8,7 @@
 import Foundation
 
 class UserModel {
-    let shared = UserModel()
+    static let shared = UserModel()
     var user:User?
-    func setUser(user: User){
-        self.user = user
-    }
 }
 

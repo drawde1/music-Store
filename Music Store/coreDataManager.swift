@@ -26,18 +26,51 @@ struct CoreDataManager {
         
         song.price = price
         song.purchased = false
-        guard let user = UserModel().shared.user else{
+        guard let user = UserModel.shared.user else{
             return
         }
         song.owner = user
         do{
             try viewContext.save()
+            //for testing  purposes only
+            self.fetchSongs()
         }
         catch{
-            print("coreData/coreDataeManager Line 37: \(error.localizedDescription)")
+            print("coreData/coreDataeManager Line 38: \(error.localizedDescription)")
         }
     }
     
+    func fetchSongs(){
+        //for testing purposes only
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let container = appDelegate?.persistentContainer
+        guard let viewContext = container?.viewContext else {return}
+        
+        let request: NSFetchRequest<Song> = Song.fetchRequest()
+        
+        do{
+           let results = try viewContext.fetch(request)
+            print(results)
+        }
+        catch{
+            print("coreData/coreDataeManager Line 55: \(error.localizedDescription)")
+        }
+    }
     
+    func fetchCart(user: User){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let container = appDelegate?.persistentContainer
+        guard let viewContext = container?.viewContext else {return}
+        
+        let request: NSFetchRequest<Song> = Song.fetchRequest()
+        request.predicate = NSPredicate(format: "owner = %@ AND purchased = %@", user, false)
+        do{
+           let results = try viewContext.fetch(request)
+            print(results)
+        }
+        catch{
+            print("coreData/coreDataeManager Line 70: \(error.localizedDescription)")
+        }
+    }
 }
 
