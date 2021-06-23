@@ -28,13 +28,14 @@ class LoginSignupViewController: UIViewController {
         
         user.password = "123"
         user.name = "Matt"
-        
-        let song = Song(context: viewContext)
-        song.name = "Fire"
-        song.price = 10
-        song.owner = user
-        
-        print(song)
+        UserModel().shared.setUser(user: user)
+        print( UserModel().shared.user)
+//        let song = Song(context: viewContext)
+//        song.name = "Fire"
+//        song.price = 10
+//        song.owner = user
+//
+//        print(song)
         print(user)
         try? viewContext.save()
     }

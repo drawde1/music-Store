@@ -32,6 +32,9 @@
 		C99A720B26823C9300BDFACA /* albumModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A720A26823C9300BDFACA /* albumModelView.swift */; };
 		C99A720E268252D000BDFACA /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A720C268252D000BDFACA /* CartTableViewCell.swift */; };
 		C99A720F268252D000BDFACA /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99A720D268252D000BDFACA /* CartTableViewCell.xib */; };
+		C99A72132683810300BDFACA /* productCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A72122683810300BDFACA /* productCellViewModel.swift */; };
+		C99A721526838D8300BDFACA /* coreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A721426838D8300BDFACA /* coreDataManager.swift */; };
+		C9BCE4F52683945E000FBA23 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCE4F42683945E000FBA23 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		C99A720A26823C9300BDFACA /* albumModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumModelView.swift; sourceTree = "<group>"; };
 		C99A720C268252D000BDFACA /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		C99A720D268252D000BDFACA /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		C99A72122683810300BDFACA /* productCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productCellViewModel.swift; sourceTree = "<group>"; };
+		C99A721426838D8300BDFACA /* coreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataManager.swift; sourceTree = "<group>"; };
+		C9BCE4F42683945E000FBA23 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				C99A71A92680D7E400BDFACA /* storyBoard */,
-				C99A71A72680D7B200BDFACA /* model */,
 				C99A71A62680D79600BDFACA /* modelView */,
+				C99A71A72680D7B200BDFACA /* model */,
 				C99A71A52680D78C00BDFACA /* controller */,
 				C99A71A42680D77700BDFACA /* view */,
 				C99A71A22680D73300BDFACA /* support */,
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C99A720A26823C9300BDFACA /* albumModelView.swift */,
+				C99A72122683810300BDFACA /* productCellViewModel.swift */,
 			);
 			name = modelView;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				C99A720826823ABA00BDFACA /* AlbumModel.swift */,
+				C9BCE4F42683945E000FBA23 /* UserModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				C99A71782680D71000BDFACA /* Music_Store.xcdatamodeld */,
+				C99A721426838D8300BDFACA /* coreDataManager.swift */,
 			);
 			name = coreData;
 			sourceTree = "<group>";
@@ -402,9 +411,12 @@
 				C99A717A2680D71000BDFACA /* Music_Store.xcdatamodeld in Sources */,
 				C99A720B26823C9300BDFACA /* albumModelView.swift in Sources */,
 				C99A71702680D71000BDFACA /* AppDelegate.swift in Sources */,
+				C99A721526838D8300BDFACA /* coreDataManager.swift in Sources */,
 				C99A71B62680F71A00BDFACA /* CartViewController.swift in Sources */,
 				C99A71B42680F70400BDFACA /* ProfileViewController.swift in Sources */,
+				C99A72132683810300BDFACA /* productCellViewModel.swift in Sources */,
 				C99A71AE2680F67B00BDFACA /* ProductViewController.swift in Sources */,
+				C9BCE4F52683945E000FBA23 /* UserModel.swift in Sources */,
 				C99A720E268252D000BDFACA /* CartTableViewCell.swift in Sources */,
 				C99A720926823ABA00BDFACA /* AlbumModel.swift in Sources */,
 				C99A71C326810CB500BDFACA /* ProductCollectionViewCell.swift in Sources */,

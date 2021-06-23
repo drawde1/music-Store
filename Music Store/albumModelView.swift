@@ -27,6 +27,13 @@ class AlbumViewModel {
             print("url returned nil")
             return
         }
+        
+        var numOfCells: Int?{
+            get{
+                return albumResults?.results.count
+            }
+        }
+        
         APIManager().getData(url: url, completion: {
             data in
             guard let data = data else{

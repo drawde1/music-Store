@@ -31,7 +31,7 @@ class ProductViewController: UIViewController {
         self.albumViewModel = AlbumViewModel(updateModel: {
             [weak self] in
             if let welf = self{
-                print("$$$$$$$$", welf.albumViewModel?.albumResults?.results[0])
+                welf.collectionView.reloadData()
             }
         })
         self.albumViewModel?.fetchData(url: "https://itunes.apple.com/search?term=a&entity=album")
@@ -54,14 +54,23 @@ class ProductViewController: UIViewController {
 
 extension ProductViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        guard let count = self.albumViewModel?.albumResults?.results.count else{
+            return 2
+        }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCollectionViewCell else{
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCollectionViewCell
+        else
+        {
             print(" ProductViewController line 37: cell returned nil")
             return UICollectionViewCell()
         }
+        guard let data = self.albumViewModel?.albumResults?.results[indexPath.row] else {
+            return cell
+        }
+        cell.configureCell(data: data)
         return cell
     }
 }
@@ -71,8 +80,10 @@ extension ProductViewController: UICollectionViewDelegate{
         addToCart.isHidden = false
     }
 }
-//extension ProductViewController: UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        CGSize(width: 2000, height: 2000)
-//    }}
+extension ProductViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = ((collectionView.bounds.width/2)-10)
+        let height = ((collectionView.bounds.height/3)+10)
+        return CGSize(width: width , height: height)
+    }}
 
