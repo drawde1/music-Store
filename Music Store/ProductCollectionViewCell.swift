@@ -17,8 +17,25 @@ class ProductCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.configureViewModel()
     }
     func configureCell(data: AlbumData){
+
+        
+        
+        
+        guard let url = URL(string: data.artworkUrl100) else{
+            return
+        }
+        productViewModel?.fecthData(url: url)
+        if let image = Image {
+            self.albumImage.image = image
+        }
+        
+        self.title.text = data.collectionName
+        self.price.text = "\(data.collectionPrice ?? 0.00)."
+        }
+    func configureViewModel(){
         productViewModel = ProductViewModel(saveImage: {
             [weak self] in
             guard let welf = self else {
@@ -32,19 +49,5 @@ class ProductCollectionViewCell: UICollectionViewCell {
                 print("data could not convert to image line: 32")
             }
         })
-        guard let url = URL(string: data.artworkUrl100) else{
-            return
-        }
-        productViewModel?.fecthData(url: url)
-        if let image = Image {
-            self.albumImage.image = image
-        }
-        else{
-            print("image returned nil")
-        }
-        
-        self.title.text = data.collectionName
-        self.price.text = "\(data.collectionPrice ?? 0.00)."
-        }
-
+    }
 }

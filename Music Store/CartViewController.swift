@@ -13,9 +13,15 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
+        //getCartData()
         // Do any additional setup after loading the view.
     }
-    
+    func getCartData(){
+        if let user = UserModel.shared.user{
+            CoreDataManager().fetchCart(user: user)
+        }
+        
+    }
     func configureTable(){
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CartCell")
