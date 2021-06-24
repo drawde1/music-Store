@@ -36,7 +36,7 @@ class LoginSignupViewController: UIViewController {
             if  fetchedUser != nil {
                 UserModel.shared.user = fetchedUser!
                 // GOTO PROFILE
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Profile", bundle:nil)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Product", bundle:nil)
                 let profileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
                 self.navigationController?.pushViewController(profileViewController, animated: true)
             } else {

@@ -128,7 +128,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="z5i-xo-q5E">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WRc-0B-SJ7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ProfileView" automaticallyAdjustsScrollViewInsets="NO" id="WRc-0B-SJ7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OJA-x8-w2c">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

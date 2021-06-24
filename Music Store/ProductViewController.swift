@@ -53,8 +53,15 @@ class ProductViewController: UIViewController {
     func configureButtons(){
         Cancel.addTarget(self, action: #selector(hideButtons), for: .touchUpInside)
         addToCart.addTarget(self, action: #selector(saveSong), for: .touchUpInside)
+        searchButton.addTarget(self, action: #selector(searchAlbum), for: .touchUpInside)
     }
-    
+    @objc func searchAlbum(){
+        if let text = searchBar.text{
+            let url = "https://itunes.apple.com/search?term=\(text)&entity=album"
+            albumViewModel?.fetchData(url: url)
+            
+        }
+    }
     func configureCollectionView(){
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "ProductCell")
