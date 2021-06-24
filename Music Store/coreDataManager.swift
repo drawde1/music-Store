@@ -33,10 +33,10 @@ struct CoreDataManager {
         do{
             try viewContext.save()
             //for testing  purposes only
-            self.fetchSongs()
+//            self.fetchSongs()
         }
         catch{
-            print("coreData/coreDataeManager Line 38: \(error.localizedDescription)")
+            print("coreData/coreDataeManager Line 39: \(error.localizedDescription)")
         }
     }
     
@@ -53,24 +53,27 @@ struct CoreDataManager {
             print(results)
         }
         catch{
-            print("coreData/coreDataeManager Line 55: \(error.localizedDescription)")
+            print("coreData/coreDataeManager Line 56: \(error.localizedDescription)")
         }
     }
+    ///WIP does not work  currently ask ed about functionality
     
-    func fetchCart(user: User){
+    func fetchSongs(user: User, purchased: Bool) -> [Song]?{
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         let container = appDelegate?.persistentContainer
-        guard let viewContext = container?.viewContext else {return}
+        guard let viewContext = container?.viewContext else {return nil}
         
         let request: NSFetchRequest<Song> = Song.fetchRequest()
-        request.predicate = NSPredicate(format: "owner = %@ AND purchased = %@", user, false)
+        request.predicate = NSPredicate(format: "owner = %@ AND purchased = %d", user, purchased)
         do{
            let results = try viewContext.fetch(request)
-            print(results)
+            return results
         }
         catch{
-            print("coreData/coreDataeManager Line 70: \(error.localizedDescription)")
+            print("coreData/coreDataeManager Line 73: \(error.localizedDescription)")
         }
+        return nil
     }
+    
 }
 

@@ -24,7 +24,6 @@ class MusicViewController: UIViewController {
      
         }
     
-    
     /*
     // MARK: - Navigation
 
@@ -50,7 +49,6 @@ extension MusicViewController: UICollectionViewDataSource {
             print(" ProductViewController line 37: cell returned nil")
             return UICollectionViewCell()
         }
-
         return cell
     }
     

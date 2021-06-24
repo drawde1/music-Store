@@ -21,17 +21,15 @@ class AlbumViewModel {
             }
         }
     }
-    
+    var numOfCells: Int?{
+        get{
+            return albumResults?.results.count
+        }
+    }
     func fetchData(url: String){
         guard let url = URL(string: url)else{
             print("url returned nil")
             return
-        }
-        
-        var numOfCells: Int?{
-            get{
-                return albumResults?.results.count
-            }
         }
         
         APIManager().getData(url: url, completion: {

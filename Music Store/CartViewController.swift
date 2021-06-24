@@ -10,18 +10,23 @@ import UIKit
 class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var songs: [Song]?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
-        //getCartData()
+        getCartData()
         // Do any additional setup after loading the view.
     }
     func getCartData(){
         if let user = UserModel.shared.user{
-            CoreDataManager().fetchCart(user: user)
+            songs = CoreDataManager().fetchSongs(user: user, purchased: false)
+            print(songs)
         }
-        
+        else{
+            print("no user found cart view controller line26:")
+        }
     }
+    
     func configureTable(){
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CartCell")
@@ -31,7 +36,10 @@ class CartViewController: UIViewController {
 }
 extension CartViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 24
+        guard let count = songs?.count else{
+            return 2
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

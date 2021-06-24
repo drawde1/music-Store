@@ -17,13 +17,12 @@ class ProductCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.configureViewModel()
+        configureViewModel()
     }
+  
+    
     func configureCell(data: AlbumData){
 
-        
-        
-        
         guard let url = URL(string: data.artworkUrl100) else{
             return
         }
@@ -35,6 +34,8 @@ class ProductCollectionViewCell: UICollectionViewCell {
         self.title.text = data.collectionName
         self.price.text = "\(data.collectionPrice ?? 0.00)."
         }
+    
+    
     func configureViewModel(){
         productViewModel = ProductViewModel(saveImage: {
             [weak self] in
